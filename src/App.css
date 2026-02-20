@@ -1,42 +1,123 @@
-#root {
-  max-width: 1280px;
+.app-shell {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 2.5rem 1.25rem 3rem;
+  color: #f3f7ff;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero {
+  margin-bottom: 1.75rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  color: #9ac0ff;
+}
+
+.hero h1 {
+  margin: 0.4rem 0 0.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.hero-copy {
+  margin: 0;
+  color: #d3ddf7;
+  max-width: 46ch;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.5rem 0 1.75rem;
+}
+
+.stat-card {
+  background: rgba(11, 24, 52, 0.62);
+  border: 1px solid rgba(122, 169, 255, 0.28);
+  border-radius: 14px;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.stat-label {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #b9cbef;
+}
+
+.stat-value {
+  margin: 0.35rem 0 0;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 700;
+}
+
+.status-panel {
+  background: rgba(4, 14, 36, 0.74);
+  border: 1px solid rgba(112, 166, 255, 0.24);
+  border-radius: 16px;
+  padding: 1.1rem;
+}
+
+.status-panel h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.1rem;
+}
+
+.status-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.status-panel li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(149, 181, 240, 0.2);
+}
+
+.status-panel li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.service-name {
+  color: #e9efff;
+}
+
+.chip {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+.chip-ok {
+  background: #133f2f;
+  color: #88ffcd;
+}
+
+.chip-warn {
+  background: #493718;
+  color: #ffd391;
+}
+
+@media (max-width: 760px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .status-panel li {
+    flex-direction: column;
+    align-items: flex-start;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

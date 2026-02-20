@@ -1,34 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+    <main className="app-shell">
+      <section className="hero">
+        <p className="eyebrow">Practica 4</p>
+        <h1>Panel de despliegue</h1>
+        <p className="hero-copy">
+          Estado general de la aplicacion y sus servicios principales.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      </section>
+
+      <section className="stats-grid">
+        <article className="stat-card">
+          <p className="stat-label">Uptime</p>
+          <p className="stat-value">99.97%</p>
+        </article>
+        <article className="stat-card">
+          <p className="stat-label">Build actual</p>
+          <p className="stat-value">v1.4.2</p>
+        </article>
+        <article className="stat-card">
+          <p className="stat-label">Usuarios activos</p>
+          <p className="stat-value">1,284</p>
+        </article>
+      </section>
+
+      <section className="status-panel">
+        <h2>Servicios</h2>
+        <ul>
+          <li>
+            <span className="service-name">API Gateway</span>
+            <span className="chip chip-ok">Operativo</span>
+          </li>
+          <li>
+            <span className="service-name">Base de datos</span>
+            <span className="chip chip-warn">Latencia media</span>
+          </li>
+          <li>
+            <span className="service-name">CDN</span>
+            <span className="chip chip-ok">Operativo</span>
+          </li>
+        </ul>
+      </section>
+    </main>
   )
 }
 
